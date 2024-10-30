@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "15.0" }
+  s.platforms    = { :ios => min_ios_version_supported }
   s.source       = { :git => "https://github.com/intercom/intercom-react-native.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm}"
   s.resource_bundles = { 'IntercomFramework' => ['ios/assets/*'] }
 
   s.dependency "React-Core"
-  s.dependency "Intercom", '~> 18.1.0'
+  s.dependency "Intercom"
 end
